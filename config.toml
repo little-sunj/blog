@@ -13,8 +13,8 @@
 # use grunt task `build` to synchronize assets
 
 baseURL = "https://little-sunj.github.io/"
-languageCode = "en-us"
-defaultContentLanguage = "en-us"
+languageCode = "ko-kr"
+defaultContentLanguage = "ko-kr"
 title = "Hello Sun"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "hugo-tranquilpeak-theme"
