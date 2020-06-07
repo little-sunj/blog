@@ -2,14 +2,15 @@
 title: "Test"
 date: 2020-06-02T22:21:33+09:00
 categories:
-- category
-- subcategory
+- blog
+- hugo
 tags:
-- tag1
-- tag2
+- hugo
+- github page
 keywords:
-- tech
+- hugo
 #thumbnailImage: //little-sunj.github.io/image.jpg
 ---
 
 <!--more-->
+create file test
