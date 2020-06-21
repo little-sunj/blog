@@ -31,15 +31,15 @@ canonifyurls = true
   archive = "archives"
 
 [author]
-  name = "Sun Jung"
-  bio = "Yes I code"
+  name = "SUN"
+  bio = "CODE & DESIGN"
   job = "Developer"
   location = "Seoul"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "sunj@tennod.com"
+  #gravatarEmail = "sunj@tennod.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
-  picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
+  picture = "images/sun.png"
   # Your Twitter username without the @. E.g : thibaudlepretre
   # twitter = "thibaudlepretre"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -90,12 +90,12 @@ canonifyurls = true
 #  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
 #  url = "https://stackoverflow.com/users/636472/kakawait"
 
-[[menu.misc]]
-  weight = 1
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-  url = "/index.xml"
+#[[menu.misc]]
+#  weight = 1
+#  identifier = "rss"
+#  name = "RSS"
+#  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+#  url = "/index.xml"
 
 [params]
   # Customize date format use to render blog post date, categories and other
