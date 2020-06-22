@@ -29,10 +29,12 @@ keywords:
 
 ### 2.CREATE TABLE
 
-> CREATE TABLE 테이블이름 (
-> 칼럼명1 DataType [default형식],
-> 칼럼명2 DataType [default형식]
-> );
+```SQL
+CREATE TABLE 테이블이름 (
+	칼럼명1 DataType [default형식],
+	칼럼명2 DataType [default형식]
+);
+```
 
 
 테이블 생성시에는 해당 테이블에 입력될 데이터를 정의하고, 정의한 데이터를 어떠한 데이터 유형으로 선언할 것인지를 결정해야 한다.
@@ -49,10 +51,10 @@ keywords:
 
 
 ### 3.ALTER TABLE
-
-> ALTER TABLE 테이블이름 
-> ADD 추가할 칼럼명   데이터 유형;
-
+```SQL
+ALTER TABLE 테이블이름 
+ADD 추가할 칼럼명   데이터 유형;   
+```
 칼럼 추가/삭제, 제약조건 추가/삭제   
 
 - **ADD COLUMN** : 컬럼추가 (맨 마지막 컬럼이 된다. 위치 지정 불가)
@@ -65,25 +67,25 @@ keywords:
 
 
 ### 4.RENAME TABLE
-
-> RENAME 변경전 테이블명 TO 변경후 테이블명;
-
+```SQL
+RENAME 변경전 테이블명 TO 변경후 테이블명;
+```
 
 테이블의 이름 변경
 
 
 
 ### 5.DROP TABLE
-
-> DROP TABLE 테이블이름 [CASCADE CONSTRAINT]; 
-
+```SQL
+DROP TABLE 테이블이름 [CASCADE CONSTRAINT]; 
+```
 테이블 삭제 (완전 구조 삭제)
 
 
 ### 6.TRUNCATE TABLE
-
->TRUNCATE TABLE 테이블명;
-
+```SQL
+TRUNCATE TABLE 테이블명;
+```
 테이블 내 모든 행 제거. 저장공간 재사용이 가능하도록 해제(즉, 데이터만 전체 삭제)   
 처리방식과 Auto commit때문에 DML이 아닌 DDL로 분류. Delete와는 처리방식이 다르며 복구가 불가능하다.
 
