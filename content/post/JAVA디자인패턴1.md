@@ -8,7 +8,7 @@ tags:
 - JAVA
 - 디자인패턴
 keywords:
-- JAVA
+- 강의노트
 #thumbnailImage: //example.com/image.jpg
 ---
 
