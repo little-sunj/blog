@@ -98,23 +98,9 @@ int intB=(int)douB;
 
 객체를 사용하는 2가지 방법
 - 직접 생성 : 생성부터 메모리 관리를 위한 소멸까지 해당 객체의 라이프사이클을 개발자가 관리 = 강한결합
- ```mermaid
-graph TB
-subgraph A객체
-newB
-newC 
-end
-```
+   
 - 의존 주입 : 다른 누군가가 생성한 객체를 사용만 하면 되므로 개발자가 관리할 것이 적어진다는 장점이 있음 = 약한결합
- ```mermaid
-graph TB
-newB-->setter
-newC-->construct
-subgraph A객체
-setter
-construct
-end
-```
+
 
 
 - **약한 결합을 사용하는 프로그래밍은 다른 클래스의 변화에 보다 더 안전하고 유연하게 대처가능**

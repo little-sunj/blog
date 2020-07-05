@@ -219,3 +219,108 @@ This is the products
 
 요즘은 프레임워크가 잘 되어있어서 직접 구현할 일이 많지 않다. (DB연결이나 Log writer등에서 사용) 
 
+
+
+- SAMPLE (LogWriter)
+
+```java
+package case2;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
+public class LogWriter {
+
+	private static LogWriter singleton = new LogWriter();
+	private static BufferedWriter bw;
+	
+	private LogWriter() {
+		try {
+			bw = new BufferedWriter(new FileWriter("log.txt"));
+		}catch(Exception e) {
+			
+		}
+	}
+	
+	public static LogWriter getInstance() {
+		return singleton;
+	}
+	
+	public synchronized void log(String str) {
+		
+		try {
+			//현재 날짜와 시각 추가
+			//bw.wrtie(LocaleDateTime.now() + " : " + str + "\n");
+			bw.write(str+"\n");
+			bw.flush();
+		}catch(Exception e) {
+			
+		}
+	}
+	
+	@Override
+	protected void finalize() {
+		try {
+			super.finalize();  
+			//note : The method finalize() from the type Object is deprecated since version 9
+			bw.close();
+		}catch(Throwable ex) {
+			
+		}
+	}
+}
+```
+
+```java
+package case2;
+
+public class TestPattern1 {
+
+	public static void main(String[] args) {
+		
+		LogWriter logger;
+		
+		logger = LogWriter.getInstance();
+		logger.log("토마토");
+		
+		logger = LogWriter.getInstance();
+		logger.log("당근");
+
+	}
+
+}
+```
+
+```java
+package case2;
+
+public class TestPattern2 {
+
+	public static void main(String[] args) {
+		for (int i=0; i<50; i++) {
+			//쓰레드마다 구분되는 로그 작성용 파라미터
+			Thread t = new ThreadSub(i);
+			t.start();
+		}
+	}
+}
+
+//외부 클래스
+class ThreadSub extends Thread {
+	int num;
+	
+	public ThreadSub(int num) {
+		this.num = num;
+	}
+
+	@Override
+	public void run() {
+		LogWriter logger = LogWriter.getInstance();
+		if (num < 10) {
+			logger.log("*** 0" + num + " ***");
+		} else {
+			logger.log("*** " + num + " ***");
+		}
+	}
+}
+```

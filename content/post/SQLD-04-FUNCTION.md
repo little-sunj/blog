@@ -121,6 +121,68 @@ DATE타입의 값을 연산하는 함수.
 
 IF-THEN-ELSE 논리와 유사한 방식으로 표현식을 작성해서 SQL의 비교 연산 기능을 보완하는 역할을 한다. 함수와 같은 성격.    
 CASE표현을 하기 위해서는 조건절을 표현하는 두 가지 방법이 있고, 오라클의 경우 DECODE 함수를 사용할 수 있다.
+   
+- 함수의 성질을 가지고 있으므로, 다른 함수처럼 중첩해서 사용할 수 있다.
+   
+
 
 - 단일행 CASE표현의 종류
 ![img1111](https://user-images.githubusercontent.com/28701069/86373677-9ce0ae80-bcbe-11ea-96da-d9c95272290a.png)
+
+
+
+--------
+
+### 7.NULL 관련 함수
+
+>**NVL/ISNULL 함수**
+> - 아직 정의되지 않은 값이다. 공백/0 이 아니다.
+> - 결과값을 NULL이 아닌 다른 값을 얻고자 할 때 NVL/ISNULL함수를 사용한다. (대상이 숫자인경우 주로 0, 문자인 경우 x와 같이 해당 시스템에서 의미 없는 문자로 바꾸어주는 경우가 많다.)
+> - 널 값을 포함하는 연산의 경우 결과값도 NULL이다. 
+
+
+![SQL_192](https://user-images.githubusercontent.com/28701069/86530922-f54ec080-bef7-11ea-8dd8-2637d822528f.jpg)
+
+
+```sql
+oracle
+NVL(NULL판단대상, 'NULL일때 대체값')
+sql server
+ISNULL(NULL판단대상, 'NULL일때 대체값')
+```
+
+>**NULL과 공집합**
+>- 조건에 맞는 데이터가 한 건도 없는 경우를 '공집합'이라 하고 NULL 데이터와는 또 다르게 이해해야 한다.
+> - NVL/NULL 함수는 NULL값을 다른 값으로 바꾸는 함수이지 공집합을 대상으로 하지 않는다.
+> - 인수의 값이 공집합인 경우는 NVL/ISNULL함수를 사용해도 역시 공집합이 출력된다.
+> - 적절한 집계 함수를 찾아서 NVL함수대신 적용할 수 있다.
+> ```sql
+> SELECT MAX(MGR) MGR FROM EMP WHERE ENAME='JSC';
+> --다른 함수와 달리 집계 함수와 Scalar subquery의 경우는 인수의 결과 값이 공집합인 경우에도 NULL을 출력한다.   
+> 
+> SELECT NVL(MAX(MGR), 9999) MGR FROM EMP WHERE ENAME='JSC';
+> ```
+> 
+
+>**NULLIF**
+>특정값을 NULL로 대체해야하는 경우에 사용
+
+>**COALESCE**
+>인수의 숫자가 한정되어 있지 않으며, 임의의 개수 EXPR에서 NULL이 아닌 최초의 EXPR을 나타낸다. 만일 모든 EXPR이 NULL이면 NULL을 리턴한다.
+>```sql
+>COALESCE (EXPR1, EXPR2, ...)
+> 
+> 아래 두 쿼리는 결과가 같다.
+> SELECT ENAME, COMM, SAL, COALESCE(COMM, SAL) COAL
+> FROM EMP;
+>
+>SELECT ENAME, COMM, SAL,
+>				CASE WHEN COMM IS NOT NULL
+>				THEN COMM
+>				ELSE (CASE WHEN SAL IS NOT NULL
+>							THEN SAL
+>							ELSE NULL
+>						END)
+>				END COAL
+>FROM EMP;
+>```
