@@ -153,7 +153,7 @@ SQL Server는 TOP조건을 사용하게 되면 별도 처리 없이 관련 ORDER
 ```sql
 TOP (Expression) [PERCENT] [WITH TIES]
 ```
-> - **WITH TIES 옵션은 동일 수치의 데이터를 추가로 더 추출한다.**
+> - **WITH TIES 옵션은 동일 수치의 데이터를 추가로 더 추출한다.**   
 > ORDER BY절의 조건 기준으로   
 >TOP N의 마지막 행으로 표시되는 추가 행의 데이터가 같을 경우   
 >N+ 동일 정렬 순서 데이터를 추가 반환하도록 지정하는 옵션이다.  
