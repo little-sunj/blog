@@ -1,5 +1,5 @@
 ---
-title: "JAVA디자인패턴2 Singleton"
+title: "디자인패턴2 Singleton"
 date: 2020-07-05T16:47:29+09:00
 categories:
 - JAVA

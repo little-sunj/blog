@@ -1,5 +1,5 @@
 ---
-title: "JAVA디자인패턴5 Observer"
+title: "디자인패턴5 Observer"
 date: 2020-07-09T00:38:20+09:00
 categories:
 - JAVA

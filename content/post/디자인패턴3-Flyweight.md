@@ -1,5 +1,5 @@
 ---
-title: "JAVA디자인패턴3 Flyweight"
+title: "디자인패턴3 Flyweight"
 date: 2020-07-06T19:41:28+09:00
 categories:
 - JAVA
