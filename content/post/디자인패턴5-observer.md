@@ -188,3 +188,326 @@ public class TestPattern {
 
 
 ----
+
+
+### 옵저버 패턴 직접 구현
+
+```java
+package case2.step1;
+
+public interface Observer {
+	public void update(boolean play);
+}
+```
+```java
+package case2.step1;
+
+
+public class MyClassA implements Observer{
+	
+	private boolean bPlay; //실행여부
+	
+	@Override
+	public void update(boolean play) {
+		this.bPlay = play;
+		myActControl();
+	}
+	
+	public void myActControl() {
+		if(bPlay) {
+			System.out.println("MyClassA : 동작을 시작합니다");
+		}else {
+			System.out.println("MyClassA : 동작을 정지합니다");
+		}
+	}
+}
+```
+```java
+package case2.step1;
+
+
+public class MyClassB implements Observer{
+	
+	private boolean bPlay; //실행여부
+	
+	@Override
+	public void update(boolean play) {
+		this.bPlay = play;
+		myActControl();
+	}
+	
+	public void myActControl() {
+		if(bPlay) {
+			System.out.println("MyClassB : 동작을 시작합니다");
+		}else {
+			System.out.println("MyClassB : 동작을 정지합니다");
+		}
+	}
+
+}
+```
+```java
+package case2.step1;
+
+public interface Publisher {
+	
+	public void addObserver(Observer o);
+	public void deleteObserver(Observer o);
+	public void notifyObservers();
+
+}
+```
+```java
+package case2.step1;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+//감시의 대상
+public class PlayController implements Publisher{
+	
+	private List<Observer> observers = new ArrayList<>();
+	private boolean play;
+
+	@Override
+	public void addObserver(Observer observer) {
+		observers.add(observer);
+		
+	}
+
+	@Override
+	public void deleteObserver(Observer observer) {
+		int index = observers.indexOf(observer);
+		observers.remove(index);
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		for(Observer observer : observers) {
+			observer.update(play);
+		}
+		
+	}
+	
+	public void setFlag(boolean play) {
+		this.play = play;
+		notifyObservers();
+	}
+	
+	public boolean getFlag() {
+		return play;
+	}
+	
+}
+```
+```java
+package case2.step1;
+
+public class TestPattern {
+
+	public static void main(String[] args) {
+		
+		PlayController pager = new PlayController();
+		Observer ob1 = new MyClassA();
+		Observer ob2 = new MyClassB();
+
+		//옵저버 등록
+		pager.addObserver(ob1);
+		pager.addObserver(ob2);
+		
+		//메시지 등록
+		pager.setFlag(false);
+		
+		//옵저버 해지
+		pager.deleteObserver(ob2);
+
+		System.out.println("---------------");
+		//메시지 등록
+		pager.setFlag(true);
+	}
+
+}
+```
+
+### 좀더 약한 연결로 구현
+```java
+package case2.step2;
+
+public interface Observer {
+	public void update(boolean play);
+}
+```
+```java
+package case2.step2;
+
+
+public class MyClassA implements Observer{
+	
+	Publisher observable; //등록될 Observable
+	private boolean bPlay; //실행여부
+	
+	//생성될 때 직접 자기 자신을 옵저버에 등록한다.
+	public MyClassA(Publisher o) {
+		this.observable = o;
+		observable.addObserver(this);
+	}
+	
+	@Override
+	public void update(boolean play) {
+		this.bPlay = play;
+		myActControl();
+	}
+	
+	public void myActControl() {
+		if(bPlay) {
+			System.out.println("MyClassA : 동작을 시작합니다");
+		}else {
+			System.out.println("MyClassA : 동작을 정지합니다");
+		}
+	}
+}
+```
+```java
+package case2.step2;
+
+
+public class MyClassB implements Observer{
+	
+	Publisher observable; //등록될 Observable
+	private boolean bPlay; //실행여부
+	
+	//생성될 때 직접 자기 자신을 옵저버에 등록한다.
+	public MyClassB(Publisher o) {
+		this.observable = o;
+		observable.addObserver(this);
+	}
+	
+	
+	@Override
+	public void update(boolean play) {
+		this.bPlay = play;
+		myActControl();
+	}
+	
+	public void myActControl() {
+		if(bPlay) {
+			System.out.println("MyClassB : 동작을 시작합니다");
+		}else {
+			System.out.println("MyClassB : 동작을 정지합니다");
+			observable.deleteObserver(this); //옵저버를 삭제 (이후 옵저버 연락을 받지 못하게된다.)
+		}
+	}
+
+}
+```
+```java
+package case2.step2;
+
+public interface Publisher {
+	
+	public void addObserver(Observer o);
+	public void deleteObserver(Observer o);
+	public void notifyObservers();
+
+}
+```
+```java
+package case2.step2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+//감시의 대상
+public class PlayController implements Publisher{
+	
+	private List<Observer> observers = new ArrayList<>();
+	private boolean play;
+
+	@Override
+	public void addObserver(Observer observer) {
+		observers.add(observer);
+		
+	}
+
+	@Override
+	public void deleteObserver(Observer observer) {
+		int index = observers.indexOf(observer);
+		observers.remove(index);
+		
+	}
+
+	@Override
+	public void notifyObservers() {
+		for (int i =0; i<observers.size(); i++) {
+			observers.get(i).update(play);
+		}
+		
+	}
+	
+	public void setFlag(boolean play) {
+		this.play = play;
+		notifyObservers();
+	}
+	
+	public boolean getFlag() {
+		return play;
+	}
+	
+}
+```
+```java
+package case2.step2;
+
+public class TestPattern {
+
+	public static void main(String[] args) {
+		
+		PlayController controller = new PlayController();
+		Observer ob1 = new MyClassA(controller);
+		Observer ob2 = new MyClassB(controller);
+
+		System.out.println("------모든 클래스 일시정지---------");
+		
+		//메시지 등록
+		controller.setFlag(false);
+		
+
+		System.out.println("-----모든 클래스 다시시작----------");
+		//메시지 등록
+		controller.setFlag(true);
+	}
+
+}
+
+
+//실행결과
+/*
+------모든 클래스 일시정지---------
+MyClassA : 동작을 정지합니다
+MyClassB : 동작을 정지합니다
+-----모든 클래스 다시시작----------
+MyClassA : 동작을 시작합니다
+
+
+*/
+```
+
+### 옵저버 패턴이 사용되는 곳
+
+Android의 View나 Button등의 위젯의 각종 이벤트를 받을 때 쓰인다.   
+
+버튼은 항상 클릭이라는 이벤트가 있으며 이 이벤트는 OnClickListener라는 인터페이스로 구성되어있다. 즉 **버튼이라는 객체가 Publisher**가 되고 **OnClickListener가 Observer**가 된다고 볼 수 있다.   
+버튼에서 상태가 변경(클릭 될 경우)된다면 OnClickListener로 알려준다.
+
+```java
+Button b = (Button)findViewById(xx);
+b.setOnClickListener(new OnClickListener() {
+	@Override
+	public void onClick(...) {
+	//Action
+	}
+});
+```

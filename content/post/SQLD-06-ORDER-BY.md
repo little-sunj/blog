@@ -112,7 +112,7 @@ ORDER BY MAX(EMPNO), MAX(MGR), SUM(SAL), COUNT(DEPTNO), MAX(HIREDATE);
 
 ### TOP N 쿼리
 
-- ROWNUM
+- ROWNUM   
 오라클에서는 데이터의 일부가 먼저 추출된 후 데이터에 대한 정렬 작업이 일어난다.   
 그렇기 때문에, 순위가 높은 N개의 ROW를 추출하기 위해 ORDER BY절과 WHERE절의 ROWNUM 조건을 같이 사용하는 걸로는 원하는 결과를 얻을 수 없으므로 주의해야한다.
 
@@ -147,7 +147,7 @@ WHERE ROWNUM <4;
 
 ----
 
-- TOP N
+- TOP N   
 SQL Server는 TOP조건을 사용하게 되면 별도 처리 없이 관련 ORDER BY절의 데이터 정렬 후 원하는 일부 데이터만 쉽게 출력 할 수 있다.
 
 ```sql
