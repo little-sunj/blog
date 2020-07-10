@@ -7,7 +7,7 @@ categories:
 tags:
 - JAVA
 - 디자인패턴
-- Observer
+- Adapter
 keywords:
 - 인강노트
 
