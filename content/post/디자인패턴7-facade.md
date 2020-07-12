@@ -10,7 +10,6 @@ tags:
 - Facade
 keywords:
 - 인강노트
-#thumbnailImage: //example.com/image.jpg
 ---
 
 <!--more-->
