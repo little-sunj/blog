@@ -1,5 +1,5 @@
 ---
-title: "SQLD DML / TCL / WHERE절"
+title: "SQLD 03 DML / TCL / WHERE절"
 date: 2020-06-22T21:59:51+09:00
 categories:
 - SQLD

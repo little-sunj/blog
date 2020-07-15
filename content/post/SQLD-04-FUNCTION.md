@@ -1,5 +1,5 @@
 ---
-title: "SQLD FUNCTION"
+title: "SQLD 04 FUNCTION"
 date: 2020-06-29T20:45:41+09:00
 categories:
 - SQLD
