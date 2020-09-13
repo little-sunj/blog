@@ -119,6 +119,8 @@ cf) a라는 아파트에 3개(a[0], a[1], a[2])동이 있고 각 동은 3층이�
 
 -----
 
+&nbsp;
+
 #### 메서드와 변수의 공통점
 
 
@@ -127,6 +129,7 @@ cf) a라는 아파트에 3개(a[0], a[1], a[2])동이 있고 각 동은 3층이�
 
 -----
 
+&nbsp;
 
 #### 메서드의 매개변수 전달기법
 
@@ -208,4 +211,4 @@ public class TPC08 {
 [![jvm](https://user-images.githubusercontent.com/28701069/93017720-d8282380-f605-11ea-8048-c9ad2719b7cf.PNG)](https://user-images.githubusercontent.com/28701069/93017720-d8282380-f605-11ea-8048-c9ad2719b7cf.PNG)
 
 Stack Area : LIFO (Last In, First Out)   
-static메소드가 아닌 add는 Method Area의 non-static 메소드에 기계어로 저장되고, Heap Area에 올라온 add는 method Area의 add의 '번지'를 담게된다. (pointer)
+static메소드가 아닌 add는 Method Area의 non-static 메소드에 기계어로 기억공간이 만들어지고, Heap Area에 올라온 add는 method Area의 add의 '번지'를 담게된다. (pointer로 연결)
