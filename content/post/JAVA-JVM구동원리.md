@@ -205,6 +205,7 @@ public class TPC08 {
 ```
 위 코드는 아래와 같이 설명된다.
 
-[![jvm](https://user-images.githubusercontent.com/28701069/93017232-086dc300-f602-11ea-86ab-95b75e6a316e.PNG)](https://user-images.githubusercontent.com/28701069/93017232-086dc300-f602-11ea-86ab-95b75e6a316e.PNG)
+[![jvm](https://user-images.githubusercontent.com/28701069/93017720-d8282380-f605-11ea-8048-c9ad2719b7cf.PNG)](https://user-images.githubusercontent.com/28701069/93017720-d8282380-f605-11ea-8048-c9ad2719b7cf.PNG)
 
-Stack Area : LIFO (Last In, First Out)
+Stack Area : LIFO (Last In, First Out)   
+static메소드가 아닌 add는 Method Area의 non-static 메소드에 기계어로 저장되고, Heap Area에 올라온 add는 method Area의 add의 '번지'를 담게된다. (pointer)
