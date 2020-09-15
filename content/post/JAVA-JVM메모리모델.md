@@ -1,5 +1,5 @@
 ---
-title: "JAVA JVM구동원리"
+title: "JAVA JVM메모리모델"
 date: 2020-09-07T17:36:15+09:00
 categories:
 - JAVA
@@ -14,7 +14,7 @@ keywords:
 ---
 
 <!--more-->
-# JVM
+# JVM 메모리모델
 
 
 
