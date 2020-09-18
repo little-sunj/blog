@@ -3,7 +3,7 @@ title: "JAVA JVM메모리모델"
 date: 2020-09-07T17:36:15+09:00
 categories:
 - JAVA
-- JVM
+- JAVA
 tags:
 - JAVA
 - JVM
