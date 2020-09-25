@@ -108,3 +108,102 @@ abstract       interface        interface
 
 
 ```
+
+
+&nbsp;
+
+-----
+
+&nbsp;
+
+
+### Object class, toString()
+
+
+#### Object Class
+- 모든 클래스의 root클래스
+    - 최상위 클래스(상속관계에서)
+    - Object클래스를 잘 활용하면 프로그램을 유연하게 만들 수 있다.
+
+
+- 클래스 설계시 생략된 코드(3곳*)
+
+```java
+import java.lang.*;  //1
+
+public class A extends Object {//2
+    public A() {super();} //3
+
+    public void display() {}
+
+    @Override
+    public String toString() {} /*object 내 toString() override*/
+}
+```
+
+- Object class를 이용한 객체 생성
+```java
+
+Object o = new A();
+A a = (A)o;
+a.display(); // ((A)o).display();
+```
+
+- toString()
+1. 재정의를 안 했을 경우 (번지출력)
+2. 재정의를 했을 경우 (재정의된 메서드 실행)
+
+&nbsp;
+
+-----
+
+&nbsp;
+
+
+### Object class활용 (다형성 인수, 다형성 배열)
+
+- 다형성 인수
+```java
+public class ObjectTest {
+
+    public static void main (String args) {
+        display(new A());
+        display(new B());
+    }
+    public void display(Object o) { //다형성 인수
+        if (o instanceof A) {
+            ((A)o).go();
+        } else {
+            ((B)o).go();
+        }
+
+    }
+
+}
+```
+
+
+- 다형성 배열   
+서로 다른 객체를 (A, B) 배열에 저장할시 부모객체로 Object활용
+```java
+public class ObjectTest {
+    public static void main(String args) {
+        OBject[] o = new Object[2];
+        o[0] = new A();
+        o[1] = new B();
+
+        for (int i = 0; i < o.length; i++) {
+            if (o[i] instanceof A) {
+                ((A)o[i]).go();
+            } else {
+                ((B)o[i]).go();
+            }
+        }
+    }
+}
+```
+
+
+&nbsp;
+
+-----
