@@ -76,6 +76,7 @@ canonifyurls = true
   name = "About"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
   url = "/#about"
+  #url = "/profile/AboutSun"
 
 [[menu.links]]
   weight = 1
