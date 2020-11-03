@@ -98,3 +98,13 @@ public class Dog implements Animal {
 - interface : 서로 기능이 다른 자식 클래스 사용시   
     서로 기능이 다른 클래스의 공통부분을 묶을 때 사용. 100%추상 메서드로 이루어진다. 100% 디자인(설계), 규약. implements keyword 사용. 다중상속 형태를 지원한다.    final static멤버변수를 가질 수 없다.   
 
+
+-----
+
+&nbsp;
+
+###### reference
+[인프런 강의 : JAVA TPC](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/dashboard)
+
+
+-----

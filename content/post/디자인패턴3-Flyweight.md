@@ -227,3 +227,12 @@ public class TestPattern {
 재사용 :b
 */
 ```
+
+
+&nbsp;
+
+###### reference
+[인프런 강의 : 디자인패턴withJAVA](https://www.inflearn.com/course/Design-pattern-java/dashboard)
+
+
+-----

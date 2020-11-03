@@ -212,3 +212,15 @@ public class TPC08 {
 
 Stack Area : LIFO (Last In, First Out)   
 static메소드가 아닌 add는 Method Area의 non-static 메소드에 기계어로 기억공간이 만들어지고, Heap Area에 올라온 add는 method Area의 add의 '번지'를 담게된다. (pointer로 연결)
+
+
+
+-----
+
+&nbsp;
+
+###### reference
+[인프런 강의 : JAVA TPC](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%EC%9E%85%EB%AC%B8-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/dashboard)
+
+
+-----

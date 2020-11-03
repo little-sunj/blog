@@ -320,3 +320,12 @@ public class PersonBuilder {
 
 //필요한 만큼만 세팅하면 된다. 다양한 생성자를 만들 필요가 없어지게 된다.
 ```
+
+
+&nbsp;
+
+###### reference
+[인프런 강의 : 디자인패턴withJAVA](https://www.inflearn.com/course/Design-pattern-java/dashboard)
+
+
+-----

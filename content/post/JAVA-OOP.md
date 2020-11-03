@@ -54,4 +54,10 @@ keywords:
 
 -----
 
-참고 : https://gmlwjd9405.github.io/2018/07/05/oop-features.html
+&nbsp;
+
+###### reference
+[참고블로그](https://gmlwjd9405.github.io/2018/07/05/oop-features.html)
+
+
+-----

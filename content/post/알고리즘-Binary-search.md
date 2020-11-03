@@ -89,3 +89,12 @@ def binary_search(list, item) :
 &nbsp;
 
 -----
+
+
+&nbsp;
+
+###### reference
+[도서 : Hello Coding 그림으로 개념을 이해하는 알고리즘](https://book.naver.com/bookdb/book_detail.nhn?bid=11823284)
+
+
+-----
