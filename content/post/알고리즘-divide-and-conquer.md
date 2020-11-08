@@ -52,5 +52,18 @@ keywords:
 
 
 **재귀에서는 상태를 추척한다는 점을 염두한다. (부분적으로 실행된 함수 호출의 상태를 모두 저장)
-
+'''
 ```
+
+&nbsp;
+
+-----
+
+
+&nbsp;
+
+###### reference
+[도서 : Hello Coding 그림으로 개념을 이해하는 알고리즘](https://book.naver.com/bookdb/book_detail.nhn?bid=11823284)
+
+
+-----
