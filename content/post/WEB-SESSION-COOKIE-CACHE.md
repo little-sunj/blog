@@ -34,7 +34,10 @@ keywords:
 - 이름, 값, 만료 날짜/시간(=쿠키 저장기간), 경로 정보 등이 들어있다.
 - 서버에서 HTTP response header에 set-cookie 속성을 이용해 클라이언트에 쿠키를 제공한다.
 - 클라이언트의 상태 정보를 로컬에 저장했다가 request시 참조한다.
-
+- 사용목적
+  1. 세션관리
+  2. 개인화
+  3. 트래킹
 
 -----
 
@@ -54,6 +57,6 @@ keywords:
 
 ###### reference
 [https://jeong-pro.tistory.com/80](https://jeong-pro.tistory.com/80)
-
+[https://cjh5414.github.io/cookie-and-session/](https://cjh5414.github.io/cookie-and-session/)
 
 -----
