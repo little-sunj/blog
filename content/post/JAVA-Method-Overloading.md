@@ -2,8 +2,8 @@
 title: "JAVA Method Overloading"
 date: 2020-09-18T21:15:32+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 오버로딩

@@ -2,8 +2,8 @@
 title: "SQLD 15 절차형 SQL"
 date: 2020-07-23T19:23:15+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

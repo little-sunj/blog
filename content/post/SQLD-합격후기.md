@@ -2,8 +2,7 @@
 title: "SQLD 합격후기"
 date: 2020-10-10T20:08:37+09:00
 categories:
-- SQLD
-- SQLD 합격후기
+- notes
 tags:
 - SQLD
 keywords:

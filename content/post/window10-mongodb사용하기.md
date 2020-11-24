@@ -2,7 +2,8 @@
 title: "Window10 Mongodb사용하기"
 date: 2020-11-17T21:07:37+09:00
 categories:
-- DB
+- database
+- mongoDB
 tags:
 - window10 mongoDB
 keywords:

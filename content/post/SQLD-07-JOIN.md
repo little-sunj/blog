@@ -2,8 +2,8 @@
 title: "SQLD 07 JOIN"
 date: 2020-07-13T19:32:50+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

@@ -2,8 +2,9 @@
 title: "디자인패턴4 Builder"
 date: 2020-07-07T18:52:54+09:00
 categories:
-- JAVA
-- 디자인패턴
+- language
+- java
+- design pattern
 tags:
 - JAVA
 - 디자인패턴

@@ -2,8 +2,9 @@
 title: "디자인패턴9 Bridge"
 date: 2020-07-12T23:00:29+09:00
 categories:
-- JAVA
-- 디자인패턴
+- language
+- java
+- design pattern
 tags:
 - JAVA
 - 디자인패턴

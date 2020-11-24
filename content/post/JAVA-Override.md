@@ -2,8 +2,8 @@
 title: "JAVA Override"
 date: 2020-09-20T12:06:47+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 재정의

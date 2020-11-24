@@ -2,8 +2,8 @@
 title: "JAVA Package"
 date: 2020-09-27T19:05:49+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 패키지

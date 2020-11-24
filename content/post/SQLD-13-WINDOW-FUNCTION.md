@@ -2,8 +2,8 @@
 title: "SQLD 13 WINDOW FUNCTION"
 date: 2020-07-21T21:10:25+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

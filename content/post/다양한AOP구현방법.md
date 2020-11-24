@@ -2,8 +2,9 @@
 title: "다양한AOP구현방법"
 date: 2020-10-17T16:40:59+09:00
 categories:
-- JAVA
-- SPRING
+- language
+- java
+- spring
 tags:
 - JAVA
 - SPRING

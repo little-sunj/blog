@@ -10,18 +10,23 @@
       - 이론
       - 문제풀이
     - network
-      - http
     - OS
+      - linux
     - web
     - language
       - java
+        - spring
+        - design pattern
       - javascript
+      - hugo
     - database
       - sql
+      - mongoDB
     - design
     - front-end
     - back-end
       - spring
+    - notes
 - [ ] GIT
 - [ ] Hugo 인강 번역/요약
     - 블로그 커스터마이즈

@@ -2,8 +2,8 @@
 title: "JAVA OOP"
 date: 2020-10-26T22:51:09+09:00
 categories:
-- JAVA
-- 객체지향 프로그래밍
+- language
+- java
 tags:
 - JAVA
 - 객체지향 프로그래밍

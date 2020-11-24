@@ -2,8 +2,8 @@
 title: "SQLD 18 조인수행원리"
 date: 2020-07-29T22:01:28+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

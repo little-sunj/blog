@@ -2,8 +2,8 @@
 title: "SQLD 05 집계 함수"
 date: 2020-07-05T20:08:42+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

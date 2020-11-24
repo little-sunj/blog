@@ -2,8 +2,8 @@
 title: "JAVA 인터페이스와JDBC관계"
 date: 2020-09-24T19:13:09+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 인터페이스와 JDBC

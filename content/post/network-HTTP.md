@@ -3,7 +3,6 @@ title: "Network HTTP"
 date: 2020-10-28T20:32:38+09:00
 categories:
 - network
-- HTTP
 tags:
 - network
 - HTTP

@@ -2,7 +2,7 @@
 title: "WEB SESSION COOKIE CACHE"
 date: 2020-11-09T19:05:36+09:00
 categories:
-- WEB
+- web
 tags:
 - WEB
 - 세션

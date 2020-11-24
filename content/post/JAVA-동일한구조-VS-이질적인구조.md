@@ -2,8 +2,8 @@
 title: "JAVA 동일한구조 vs 이질적인구조"
 date: 2020-09-19T21:55:45+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 배열,클래스

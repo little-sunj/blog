@@ -2,8 +2,9 @@
 title: "디자인패턴7 Facade"
 date: 2020-07-11T21:11:55+09:00
 categories:
-- JAVA
-- 디자인패턴
+- language
+- java
+- design pattern
 tags:
 - JAVA
 - 디자인패턴

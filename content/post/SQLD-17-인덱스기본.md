@@ -2,8 +2,8 @@
 title: "SQLD 17 인덱스기본"
 date: 2020-07-28T21:50:58+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

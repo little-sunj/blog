@@ -2,8 +2,8 @@
 title: "SQLD 16 옵티마이저와 실행계획"
 date: 2020-07-27T21:31:05+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

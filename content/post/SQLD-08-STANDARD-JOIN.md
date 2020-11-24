@@ -2,8 +2,8 @@
 title: "SQLD 08 STANDARD JOIN"
 date: 2020-07-13T20:45:08+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

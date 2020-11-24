@@ -2,8 +2,8 @@
 title: "SQLD 14 DCL"
 date: 2020-07-22T20:01:00+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

@@ -2,8 +2,8 @@
 title: "SQLD 10 계층형 질의와 셀프 조인"
 date: 2020-07-16T18:12:56+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

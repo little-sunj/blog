@@ -2,8 +2,8 @@
 title: "JAVA Wrapper"
 date: 2020-09-27T20:13:33+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - wrapper

@@ -2,8 +2,8 @@
 title: "SQLD 12 GROUP FUNCTION"
 date: 2020-07-20T20:53:59+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

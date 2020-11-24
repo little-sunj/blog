@@ -2,8 +2,8 @@
 title: "JAVA 추상클래스"
 date: 2020-09-23T14:10:17+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 추상클래스

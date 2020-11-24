@@ -2,8 +2,8 @@
 title: "JAVA String"
 date: 2020-09-27T19:32:50+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - String

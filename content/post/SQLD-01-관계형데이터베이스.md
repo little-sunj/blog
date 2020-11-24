@@ -2,8 +2,8 @@
 title: "SQLD 01 관계형데이터베이스"
 date: 2020-06-17T22:24:32+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

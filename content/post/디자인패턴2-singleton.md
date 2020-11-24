@@ -2,8 +2,9 @@
 title: "디자인패턴2 Singleton"
 date: 2020-07-05T16:47:29+09:00
 categories:
-- JAVA
-- 디자인패턴
+- language
+- java
+- design pattern
 tags:
 - JAVA
 - 디자인패턴

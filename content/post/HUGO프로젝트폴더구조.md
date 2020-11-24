@@ -2,7 +2,7 @@
 title: "HUGO프로젝트폴더구조"
 date: 2020-06-07T17:54:58+09:00
 categories:
-- blog
+- language
 - hugo
 tags:
 - hugo

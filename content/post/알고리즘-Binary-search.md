@@ -2,8 +2,8 @@
 title: "알고리즘 Binary Search"
 date: 2020-09-27T20:39:54+09:00
 categories:
-- CS지식
-- 알고리즘
+- algorithm
+- 이론
 tags:
 - 알고리즘
 - 이진탐색

@@ -2,8 +2,8 @@
 title: "SQLD 11 SUBQUERY"
 date: 2020-07-19T13:02:40+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

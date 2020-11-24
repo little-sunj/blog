@@ -2,8 +2,8 @@
 title: "SQLD 03 DML / TCL / WHERE절"
 date: 2020-06-22T21:59:51+09:00
 categories:
-- SQLD
-- 2과목 SQL 기본 및 활용
+- database
+- sql
 tags:
 - SQLD
 keywords:

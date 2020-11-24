@@ -2,8 +2,8 @@
 title: "JAVA Polymorphism"
 date: 2020-09-22T19:56:45+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 다형성

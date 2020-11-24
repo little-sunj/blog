@@ -4,8 +4,7 @@ date: 2020-11-10T20:21:43+09:00
 categories:
 - WEB
 tags:
-- WEB
-- DOM구조
+- web
 keywords:
 - WEB
 #thumbnailImage: //example.com/image.jpg

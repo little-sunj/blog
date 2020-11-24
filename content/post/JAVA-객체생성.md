@@ -2,8 +2,8 @@
 title: "JAVA 객체생성"
 date: 2020-09-15T18:55:32+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - JVM

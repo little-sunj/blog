@@ -2,8 +2,9 @@
 title: "디자인패턴8 Decorator"
 date: 2020-07-12T22:13:53+09:00
 categories:
-- JAVA
-- 디자인패턴
+- language
+- java
+- design pattern
 tags:
 - JAVA
 - 디자인패턴

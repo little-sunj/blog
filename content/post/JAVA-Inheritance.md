@@ -2,8 +2,8 @@
 title: "JAVA Inheritance"
 date: 2020-09-19T22:41:28+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 상속

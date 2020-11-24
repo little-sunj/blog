@@ -2,8 +2,8 @@
 title: "JAVA 클래스설계"
 date: 2020-09-17T20:39:27+09:00
 categories:
-- JAVA
-- JAVA기본
+- language
+- java
 tags:
 - JAVA
 - 클래스설계
