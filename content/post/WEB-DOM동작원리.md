@@ -2,7 +2,7 @@
 title: "WEB DOM동작원리"
 date: 2020-11-10T20:21:43+09:00
 categories:
-- WEB
+- web
 tags:
 - web
 keywords:
