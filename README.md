@@ -12,10 +12,11 @@
   - OS
     - linux
     - window
+  - devOps
+    - docker
   - web
   - language
     - java
-      - spring
       - design pattern
     - javascript
     - hugo
@@ -23,8 +24,7 @@
     - sql
     - mongoDB
   - design
-  - front-end
-  - back-end
+  - framework
     - spring
   - notes
 - [ ] GIT

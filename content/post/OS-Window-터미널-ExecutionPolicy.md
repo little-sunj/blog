@@ -3,14 +3,14 @@ title: "OS Window 터미널 ExecutionPolicy"
 date: 2020-12-01T16:56:53+09:00
 categories:
 - OS
-- Windows
+- window
 tags:
 - OS
-- Windows
+- window
 - Terminal
 - 실행정책
 keywords:
-- Windows
+- Window
 #thumbnailImage: //example.com/image.jpg
 ---
 
@@ -31,7 +31,7 @@ http-server : 이 시스템에서 스크립트를 실행할 수 없으므로 C:\
     + FullyQualifiedErrorId : UnauthorizedAccess
 ```
 
-(링크를 타면 상세 내용을 확인할 수 있다.)<br/>
+(위 메시지에서 제공하는 링크를 타면 상세 내용을 확인할 수 있다.)<br/>
 파워셀이 안전상의 이유로 스크립트를 허용하지 않는단 이야기.
 아래와 같이 권한을 설정하여 스크립트를 실행할 수 있다.
 
