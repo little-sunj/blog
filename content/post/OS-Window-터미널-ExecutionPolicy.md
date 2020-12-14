@@ -22,7 +22,7 @@ keywords:
 설치된 http server 버전을 확인하고자 `http-server --version`를 윈도우 터미널에 입력했더니 아래와 같은 메시지가 출력되었다.
 
 ```
-http-server : 이 시스템에서 스크립트를 실행할 수 없으므로 C:\Users\SunJung\AppData\Roaming\npm\http-server.ps1 파일을
+http-server : 이 시스템에서 스크립트를 실행할 수 없으므로 C:\Users\(사용자)\AppData\Roaming\npm\http-server.ps1 파일을
 로드할 수 없습니다. 자세한 내용은 about_Execution_Policies(https://go.microsoft.com/fwlink/?LinkID=135170)를 참조하십시오.
 위치 줄:1 문자:1
 + http-server --version
