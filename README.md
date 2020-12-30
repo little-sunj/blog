@@ -2,11 +2,12 @@
 
 #### short-term goals
 
-- [ ] WeTube 완강 : (목표) 12월 중순
-- [ ] 알고리즘 기초 완독 : (목표) 12월 말
+- [X] WeTube 완강 
+- [X] 알고리즘 기초 완독
+- [ ] spring 인강 (~1월 완강 목표)
 
 #### long-term goals
-- [ ] mosh java : (목표) 1월 시작
+- [ ] mosh : ~  2021.11.29
 
 #### less important long-term goals
 - [ ] back-end 스크랩글 번역
