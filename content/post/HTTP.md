@@ -1,12 +1,11 @@
 ---
-title: "Network HTTP"
+title: "HTTP"
 date: 2020-10-28T20:32:38+09:00
 categories:
 - network
 tags:
 - network
 - HTTP
-- HTTP Header
 keywords:
 - 스터디노트
 #thumbnailImage: //example.com/image.jpg
@@ -165,8 +164,6 @@ HTTP파이프라인이 활성화되면, 응답을 완전히 수신할 때까지 
 - Hop-by-hop header
     - 단일 전송-레벨 연결에서만 의미가 있다. 프록시에 의해 재전송되거나 캐시되어서는 안된다. 
     - 홉간 헤더는 Connection 일반 헤더를 사용해 설정될 수도 있다.
-- ex) connection, Keep-Alive, proxy-authenticate, proxy-authorization, TE, Trailer, Transfer-Encoding, Upgrade. 
-
 
 &nbsp;
 
@@ -182,13 +179,139 @@ HTTP파이프라인이 활성화되면, 응답을 완전히 수신할 때까지 
 
 -----
 
+##  HTTP 메서드 종류
+
+#### 주요 메서드
+- GET : 리소스 조회
+  - 서버에 전달하고 싶은 데이터는 QUERY(쿼리 파라미터, 쿼리 스트링)을 통해서 전달
+  - 메시지 바디를 사용해서 데이터를 전달할 수 있지만, 지원하지 않는 곳이 많아서 권장하지 않는다.
+- POST : 요청 데이터 처리, 주로 등록에 사용
+  - **메시지 바디를 통해 서버로 요청 데이터 전달**
+  - 메시지 바디를 통해 들어온 데이터를 처리하는 모든 기능을 수행한다.
+  - 주로 전달된 데이터로 신규 리소스 등록, 프로세스 처리에 사용. 요청에 포함 된 표현을 처리
+    - ex1) HTML 양식에 입력 된 필드와 같은 데이터 블록을 데이터 처리 프로세스에 제공 (회원가입, 주문)
+    - ex2) 게시판, 뉴스 그룹, 메일링 리스트, 블로그 또는 유사한 기사 그룹에 메시지 게시 (게시판 글쓰기, 댓글 달기)
+    - ex3) 서버가 아직 식별하지 않은 새 리소스 생성 (신규 주문 생성)
+    - ex4) 기존 자원에 데이터 추가 (한 문서 끝에 내용 추가)
+  - **리소스 URI에 POST요청이 들어오면 요청 데이터를 어떻게 처리할지 리소스마다 따로 정해야한다. 즉, 정해진 것이 없다.** 
+  - 다른 메서드로 처리하기 애매한 경우 사용하기도 한다.
+  - POST의 결과로 새로운 리소스가 생성되지 않을 수도 있다. (컨트롤URI를 사용하기도 한다. ex - POST /orders/{orderId}/start-delivery)
+- PUT : 리소스가 있으면 **완전히** 대체(덮어버린다), 해당 리소스가 없으면 생성
+  - **클라이언트가 리소스를 식별** : 클라이언트가 리소스 위치를 **알고 URI 지정**. 이것이 POST와의 큰 차이점이다.
+- PATCH : 리소스 부분 변경
+  - 간혹 PATCH를 지원하지 못하는 서버도 있다. 그런 경우 POST를 사용하면 된다.
+- DELETE : 리소스 삭제
+
+#### 기타 메서드
+- HEAD : GET과 동일하지만 메시지 부분을 제외하고, 상태 줄과 헤더만 반환
+- OPTIONS : 대상 리소스에 대한 통신 가능 옵션(메서드)을 설명(주로 CORS에서 사용)
+- CONNECT : 대상 자원으로 식별되는 서버에 대한 터널을 설정
+- TRACE : 대상 리소스에 대한 경로를 따라 메시지 루프백 테스트를 수행
+
 &nbsp;
 
-#### 공부자료
+-----
+
+## HTTP 메서드 속성
+
+#### 안전 (safe)
+- 호출해도 리소스를 변경하지 않는다. (ex) GET) POST등은 리소스를 변경할 수 있으므로 해당되지 않는다.
+
+#### 멱등 (Idempotent)
+- f(f(x)) = f(x)
+- 한 번 호출하든 두 번 호출하든 100번 호출하든 결과가 똑같다.
+- 멱등 메서드 
+  - GET : 한 번 조회하든, 두 번 조회하든 같은 결과 조회
+  - PUT : 결과를 대체. 따라서 같은 요청을 여러번 해도 결과는 같다.
+  - DELETE : 결과를 삭제한다. 같은 요청을 여러번 해도 삭제된 결과는 똑같다.
+  - **POST : 멱등이 아니다.** 여러번 호출시 같은 결제가 중복 발생할 수 있다.
+- 활용 
+  - 자동 복구 매커니즘
+  - 서버가 TIMEOUT 등으로 정상 응답을 못 주었을 때, 클라이언트가 같은 요청을 다시 해도 되는가의 판단근거.
+  - **멱등은 외부 요인으로 중간에 리소스가 변경되는 것 까지는 고려하지 않는다.** : 중간에 바뀌면 멱등하지 않다고 판단.
+
+#### 캐시가능 (cacheable)
+- 응답 결과 리소스를 캐시해서 사용해도 되는가.
+- GET / HEAD / POST / PATCH 캐시가능
+- 실제로는 GET / HEAD 정도만 캐시로 사용
+  - POST / PATCH는 본문 내용까지 캐시 키로 고려해야 하는데, 구현이 쉽지 않다.
+
+&nbsp;
+
+-----
+
+## HTTP 메서드 활용
+
+### 클라이언트에서 서버로 데이터 전송
+
+- 데이터 전달 방식은 크게 2가지
+  - 쿼리 파라미터를 통한 데이터 전송
+    - GET
+    - 주로 정렬 필터 (검색어)
+  - 메시지 바디를 통한 데이터 전송
+    - POST / PUT / PATCH 
+    - 회원가입, 상품주문, 리소스 등록, 리소스 변경
+  
+- CASE 4가지
+  - 정적 데이터 조회
+    - 이미지, 정적 텍스트 문서
+    - 조회는 GET 사용
+    - 정적 데이터는 일반적으로 쿼리 파라미터 없이 리소스 경로로 단순하게 조회 가능
+  - 동적 데이터 조회
+    - 주로 검색, 게시판 목록에서 정렬 필터 (검색어)
+    - 조회 조건을 줄여주는 필터, 조회 결과를 정렬하는 정렬 조건에 주로 사용
+    - 조회는 GET 사용 (쿼리 파라미터 사용해서 데이터 전달)
+  - HTML FORM을 통한 데이터 전송
+    - 회원 가입, 상품 주문, 데이터 변경
+    - **GET / POST만 지원한다.**
+    - submit 버튼 클릭시 웹 브라우저가 form 데이터를 읽어서 http 메시지를 생성
+    - key=value 형식으로 생성된다.
+    - 전송 데이터를 url encoding 처리
+    - 파일 전송시에는 `enctype="multipart/form-data"`를 추가한다. 바이너리 데이터를 전송할때 주로 사용된다.
+    ```
+    //이렇게 추가하면 http메시지가 아래처럼 생성된다.
+
+    POST /home HTTP/1.1
+    Host: localhost:8080
+    content-type: multipart/form-data; boundary=----XXX //웹 브라우저가 알아서 랜덤으로 생성
+    content-Length : 10000
+
+    ------XXX
+    Content-Disposition: form-data; name="username"
+
+    kim
+    ------XXX
+    Content-Disposition: form-data; name="age"
+
+    20
+    ------XXX
+    Content-Disposition: form-data; name="file1"; filename="image.png"
+    Content-Type:image/png
+
+    123123Dsdfkjsel234...
+    ------XXX
+
+    ```
+  - HTML API를 통한 데이터 전송
+    - 회원 가입, 상품 주문, 데이터 변경
+    - 서버 to 서버(백엔드 시스템 통신), 앱 클라이언트, 웹 클라이언트 (ajax)
+    - POST / PUT / PATCH  메시지 바디를 통해 데이터 전송
+    - GET 조회, 쿼리 파라미터로 데이터 전달
+    - Content-Type: application/json을 주로 사용 (사실상 표준)
+      - TEXT / XML / JSON 등등..
+
+
+
+
+&nbsp;
+
+-----
+
+&nbsp;
+
+#### reference
 - [MDN HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP)
-
-###### 마지막 업데이트일자 - 2020.11.08
-
+- [모든 개발자를 위한 HTTP 웹 기본 지식](https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/dashboard)
 
 &nbsp;
 

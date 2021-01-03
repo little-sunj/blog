@@ -2,8 +2,7 @@
 
 #### short-term goals
 
-- [X] WeTube 완강 
-- [X] 알고리즘 기초 완독
+- [ ] http 인강 (~1월 2일 완강 목표)
 - [ ] spring 인강 (~1월 완강 목표)
 
 #### long-term goals
@@ -40,3 +39,10 @@
 - framework
   - spring
 - notes
+
+-----
+
+## DONE
+
+- [X] 알고리즘 기초 도서 완독
+- [X] weTube 완강
