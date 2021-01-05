@@ -2,8 +2,8 @@
 
 #### short-term goals
 
-- [ ] http 인강 (~1월 2일 완강 목표)
-- [ ] spring 인강 (~1월 완강 목표)
+- [ ] spring 기본편 인강 (~1월 중순 완강 목표)
+- [ ] JPA 기본편 인강 (~1월 완강 목표)
 
 #### long-term goals
 - [ ] mosh : ~  2021.11.29
@@ -32,12 +32,13 @@
     - design pattern
   - javascript
   - hugo
+- framework
+  - spring
 - database
   - sql
   - mongoDB
 - design
-- framework
-  - spring
+
 - notes
 
 -----
@@ -46,3 +47,4 @@
 
 - [X] 알고리즘 기초 도서 완독
 - [X] weTube 완강
+- [X] http 인강
