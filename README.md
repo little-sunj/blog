@@ -40,6 +40,7 @@
   - sql
   - mongoDB
 - design
+- back-end
 
 - notes
 
