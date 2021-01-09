@@ -93,4 +93,11 @@ ctrl + shift + space (스마트 자동완성)
 
 &nbsp;
 
+- extract method
+```
+ctrl + alt + m
+```
+
+&nbsp;
+
 -----
