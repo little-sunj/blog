@@ -100,4 +100,19 @@ ctrl + alt + m
 
 &nbsp;
 
+- iteration for문 자동완성
+```
+iter + tab
+```
+
+&nbsp;
+
+- `System.out.println` 자동완성
+```
+sout
+soutv
+```
+
+&nbsp;
+
 -----
