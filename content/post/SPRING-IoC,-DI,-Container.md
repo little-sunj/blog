@@ -62,6 +62,13 @@ keywords:
 
 > 정확히는 `BeanFactory`와 `ApplicationContext`로 구분된다. `BeanFactory`를 직접 사용하는 경우는 거의 없으므로 일반적으론 `ApplicationContext`를 스프링 컨테이너라 한다.
 
+- **Beanfactory** : 스프링 컨테이너의 최상위 인터페이스.
+- **ApplicationContext** : BeanFactory를 상속. BeanFatory외 다른 인터페이스들도 상속받는다. 애플리케이션을 개발할 때 빈을 관리하고 조회하는 기능뿐 아니라 많은 부가기능을 제공한다.
+  - 메시지소스를 활용한 국제화 기능 (접속 환경에 따른 언어 출력) 
+  - 환경변수 (로컬, 개발, 운영 등을 구분해서 처리)
+  - 애플리케이션 이벤트 (이벤트를 발행하고 구독하는 모델 지원)
+  - 편리한 리소스 조회 (파일, 클래스패스, 외부 등에서 리소스 편리하게 조회)
+
 &nbsp;
 
 #### 생성과정
@@ -82,21 +89,25 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 - 직접 부여할 수도 있다. `@Bean(name="memberService")`
 - **빈 이름은 항상 다른 이름을 부여** 해야 한다. 같은 이름을 사용하면 다른 빈이 무시되거나, 오류가 발생할 수 있다.
 
-
 ##### 2. 스프링 빈 의존관계 설정
 - 컨테이너는 설정 정보를 참고해서 의존관계를 주입한다.
 - 스프링에서는 빈을 먼저 생성하고, 의존관계를 주입하는 것으로 단계가 나누어져 있다. 그러나 자바코드에 따라 스프링 빈을 등록하면 생성자를 호출하면서 의존관계 주입까지 한번에 처리하도록 할 수 있다.
 
-&nbsp;
-
-
-
+###### 스프링 빈 조회
 - `AnnotationConfigApplicationContext.getBeanDifinitionNames()` : 스프링에 등록된 모든 빈 이름을 조회
 - `AnnotationConfigApplicationContext.getBean()` : 빈 이름으로 빈 객체(인스턴스) 조회
 - `BeanDefinition.ROLE_APPLICATION` : 일반적으로 사용자가 정의한 빈
 - `BeanDefinition.ROLE_INFRASTRUCTURE` : 스프링 내부 빈
+- 스프링 빈 조회시 부모타입으로 조회하면 모든 자식 타입도 함께 조회된다. (`Object`타입으로 조회시 모든 스프링 빈 조회)
 
 -----
+
+### XML 설정 사용
+최근에는 스프링 부트를 사용하면서 XML기반 설정은 잘 사용되지 않는다. 하지만 아직 많은 레거시 프로젝트들이 XML로 되어 있고, XML사용시 컴파일 없이 빈 설정 정보를 변경할 수 있는 장점도 있기 때문에 알아두면 좋다.
+
+- [공식 문서 참고](https://spring.io/projects/spring-framework)
+
+
 
 
 &nbsp;
