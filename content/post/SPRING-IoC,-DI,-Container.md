@@ -108,9 +108,64 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 - [공식 문서 참고](https://spring.io/projects/spring-framework)
 
 
+&nbsp;
+
+-----
+
+### 컴포넌트 스캔
+설정 정보가 없어도 자동으로 스프링 빈을 등록하는 기능.
+`@Autowired`를 통해 의존관계도 자동으로 주입하는 기능도 제공한다.
+
+- `basePackages` 지정을 생략할 시, 해당 위치 및 하위는 모두 자동으로 컴포넌트 스캔 대상이 된다. 
+- 메인 설정정보는 프로젝트 시작 루트 위치에 두는 것이 좋다.
+- 스프링 부트 사용시 `@SpringBootApplication`을 프로젝트 시작 루트 위치에 두는 것이 관례이다. (이 설정안에 `@ComponentScan`이 들어있다)
+
+> 사실 어노테이션은 상속관계란 것이 없다. 어노테이션이 특정 어노테이션을 들고 있는 것을 인식할 수 있는 것은 자바가 아닌 스프링이 지원하는 기능이다.
+
+```java
+
+@Controller     //스프링 MVC 컨트롤러로 인식
+@Repository     //스프링 데이터 접근 계층으로 인식. 데이터 계층의 예외를 스프링 예외로 변환
+@Configuration  //스프링 설정정보. 싱글톤 유지
+@Service        //특별한 처리는 없지만 비즈니스 계층 인식에 도움이 된다.
+
+```
+
+&nbsp;
+
+-----
+
+### 필터
+
+`includeFilters`와 `excludeFilters`를 통해서 `@ComponentScan`에서 스캔여부를 지정할 수 있다. 자주 사용되지는 않는다. 
+
+- ANNOTATION : 기본값. 어노테이션을 인식해서 동작
+- ASSIGNABLE_TYPE : 지정한 타입과 자식 타입을 인식해서 동작
+- ASPECTJ : AspectJ 패턴 사용
+- REGEX : 정규표현식
+- CUSTOM : `TypeFilter`라는 인터페이스를 구현해서 처리
 
 
 &nbsp;
+
+-----
+
+### 빈 중복 등록과 충돌
+
+두가지 케이스가 있다.
+
+1. 자동 빈 등록 VS 자동 빈 등록
+   - 컴포넌트 스캔에 의해 자동으로 빈이 등록되었는데, 이름이 같은 경우 스프링에서 오류를 발생시킨다.
+2. 수동 빈 등록 VS 자동 빈 등록
+   - 스프링에서는 수동 빈 등록과 자동 빈 등록에서 빈 이름이 충돌나면 수동 빈 등록이 우선권을 가진다. (자동 빈을 오버라이딩 해버린다.)
+   - 하지만 현실적으로 개발자의 의도하기보단 오류에 의한 케이스가 많아져서 최근 스프링 부트에서는 이런경우에도 **오류가 발생하도록** 기본값을 바꾸었다.
+
+
+
+
+&nbsp;
+
+-----
 
 #### reference
 - [스프링 핵심원리](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8/dashboard)
