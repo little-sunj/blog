@@ -17,6 +17,7 @@ keywords:
 &nbsp;
 
 
+### 코드작성
 
 &nbsp;
 
@@ -57,30 +58,9 @@ ctrl + r
 
 &nbsp;
 
-- 전체에서 검색 
-```
-ctrl + shift + f
-```
-
-&nbsp;
-
 - 전체에서 replace 
 ```
 ctrl + shift + r
-```
-
-&nbsp;
-
-- 파일검색
-```
-ctrl + shift + n
-```
-
-&nbsp;
-
-- 메서드검색
-```
-ctrl + shift + alt + n
 ```
 
 &nbsp;
@@ -111,6 +91,40 @@ iter + tab
 ```
 sout
 soutv
+```
+
+&nbsp;
+
+-----
+
+### 검색
+
+&nbsp;
+
+- 전체에서 검색 (find in path)
+```
+ctrl + shift + f
+```
+
+&nbsp;
+
+- 파일검색
+```
+ctrl + shift + n
+```
+
+&nbsp;
+
+- 메서드검색
+```
+ctrl + shift + alt + n
+```
+
+&nbsp;
+
+- 퀵서치
+```
+shift + shift
 ```
 
 &nbsp;
