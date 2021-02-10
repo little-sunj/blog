@@ -3,7 +3,7 @@
 #### short-term goals
 
 - [ ] JPA 1 인강 (~2월 완강 목표)
-- [ ] 문제풀이 하루 1개 목표 - 1월~2월 easy / 이후 medium 
+- [ ] 문제풀이 하루 1개 목표 - 1월~3월 easy / 이후 medium 
 
 #### long-term goals
 - [ ] mosh : ~  2021.11.29
