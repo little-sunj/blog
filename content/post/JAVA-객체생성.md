@@ -197,6 +197,7 @@ ex) 자바 API의 SYSTEM.  MATH. 등등..
 &nbsp;
 
 - class ( 객체설계 모델링 / 설계도 / 자료구조 )
+A blueprint for creating objects
 ```java
 pubic class BookDTO {
     private String title;
