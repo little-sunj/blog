@@ -58,12 +58,33 @@ System.out.println(" y : " + y); // y : 33
 
 &nbsp;
 
-- 예제코드 (작성중)
+- 예시
 
 ```java
 
-// ~x
+int x = 9;
+int y = 3;
 
+System.out.println(" x to BinaryString : " + Integer.toBinaryString(x));        //1001
+System.out.println(" y to BinaryString : " + Integer.toBinaryString(y));        // 11
+
+System.out.println(" ~x : " + (~x));    // -10
+System.out.println(" ~x to BinaryString : " + Integer.toBinaryString(~x));  //11111111111111111111111111110110
+
+System.out.println(" x&y : " + (x&y));  // 1
+System.out.println(" x&y to BinaryString : " + Integer.toBinaryString(x&y));    // 1
+
+System.out.println(" x^y : " + (x^y));  //10
+System.out.println(" x^y to BinaryString : " + Integer.toBinaryString(x^y));    //1010
+
+System.out.println(" x<<y : " + (x<<y));    //72
+System.out.println(" x<<y to BinaryString : " + Integer.toBinaryString(x<<y));  //1001000
+
+System.out.println(" x>>y : " + (x>>y));    //1
+System.out.println(" x>>y to BinaryString : " + Integer.toBinaryString(x>>y));  // 1
+
+System.out.println(" x>>>y : " + (x>>>y));  //1
+System.out.println(" x>>>y to BinaryString : " + Integer.toBinaryString(x>>>y));    // 1
 
 
 ```
@@ -72,7 +93,3 @@ System.out.println(" y : " + y); // y : 33
 
 
 -----
-
-- reference
-
-https://coding-factory.tistory.com/521
