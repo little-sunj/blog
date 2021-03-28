@@ -2,10 +2,12 @@
 
 #### short-term goals
 
-- [ ] JPA 2 인강 (~3월 완강 목표)
+- [ ] PHP 스터디 (~ 4월)
 - [ ] 문제풀이 하루 1개 목표 - 1월~3월 easy / 이후 medium 
 
 #### long-term goals
+- [ ] MVC 인강 
+- [ ] JPA 2 인강 
 - [ ] mosh : ~  2021.11.29
 - [ ] java 공부
 
