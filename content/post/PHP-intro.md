@@ -62,6 +62,41 @@ echo $x;
 
 -----
 
+
+### echo and print
+
+output을 내는 방법으론 `echo`와 `print` 두 가지가 있다.
+
+- 차이점
+  - `echo` 
+    - return value가 없다
+    - 매개변수를 여러개 받을 수 있다. (흔하게 사용되지는 않음)
+    - 속도가 약간 더 빠르다
+    - 괄호를 사용해도 되고, 사용하지 않아도 된다. ex.`echo`, `echo()`
+    ```php
+    <?php
+    echo "<h2>PHP is Fun!</h2>";
+    echo "Hello world!<br>";
+    echo "I'm about to learn PHP!<br>";
+    echo "This ", "string ", "was ", "made ", "with multiple parameters.";
+    ?> 
+    ```
+  - `print` 
+    - 1을 리턴하기 대문에 expression에 사용될 수 있다.
+    - 1개의 매개변수만 받을 수 있다
+    ```php
+    <?php
+    print "<h2>PHP is Fun!</h2>";
+    print "Hello world!<br>";
+    print "I'm about to learn PHP!";
+    ?>
+    ```
+
+&nbsp;
+
+-----
+
+
 ### PHP 7
 
 - 기존 구 버전 (주로 PHP 5.6)에 비해 훨씬 빠르다

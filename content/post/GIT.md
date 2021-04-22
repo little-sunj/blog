@@ -90,6 +90,13 @@ rm -rf .git //remove git
 
 &nbsp;
 
+- commit은 너무 크지도 작지도 않은 정도가 좋다. check point마다 진행한다.
+- Bug Fix 와 typographic error는 따로 커밋한다.
+
+-----
+
+&nbsp;
+
 - reference
  [공부자료](https://codewithmosh.com/)
 
