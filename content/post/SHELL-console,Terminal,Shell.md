@@ -2,13 +2,11 @@
 title: "SHELL Console,Terminal,Shell"
 date: 2021-05-03T20:00:18+09:00
 categories:
-- category
-- subcategory
+- Shell
 tags:
-- tag1
-- tag2
+- Console,Terminal,Shell
 keywords:
-- tech
+- Console,Terminal,Shell
 #thumbnailImage: //example.com/image.jpg
 ---
 
