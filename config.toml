@@ -34,7 +34,7 @@ canonifyurls = true
   name = "SUN"
   bio = "DEV SUN study notes"
   job = "Developer"
-  location = "Seoul"
+  location = "Seoul Korea"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   #gravatarEmail = "sunj@tennod.com"
   # Your profile picture
