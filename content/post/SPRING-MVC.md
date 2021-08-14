@@ -18,23 +18,6 @@ keywords:
 
 &nbsp;
 
-### MVC 컨트롤러의 단점
-- 포워드 중복
-  - View로 이동하는 코드가 항상 중복 호출. 메서드로 공통화 하더라도 메서드를 항상 직접 호출.
-- viewPath에 중복
-  - prefix `/WEB-INF/views/`와 suffix `.jsp` 중복
-  - jsp가 아닌 thymeleaf같은 다른 뷰로 변경한다면 전체코드를 다 변경해야한다.
-- 사용하지 않는 코드
-  - `HttpServletRequest request, HttpServletResponse response` 
-- `HttpServletRequest request, HttpServletResponse response` 를 사용하는 코드는 테스트케이스 작성이 어렵다.
-- 공통처리가 어렵다.
-  - 기능이 복잡할수록 컨트롤러에서 공통으로 처리해야 하는 부분이 점점 더 많이 증가.
-  - **프론트 컨트롤러(Front Controller)** 패턴을 도입하면 해결할 수 있다.
-
-&nbsp;
-
------
-
 
 ### 프론트 컨트롤러 패턴
 
