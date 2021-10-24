@@ -30,6 +30,14 @@ keywords:
 
 &nbsp;
 
+### SPRING MVC
+
+- `dispatcherServlet`이 `HttpServlet`을 상속받는 프론트 컨트롤러이다.
+- 스프링 부트는 `dispatcherServlet`을 자동으로 등록하면서 모든경로 `urlPatterns="/"`에 대해 매핑한다.
+- 경로가 자세할수록 우선순위가 높다.
+
+`서블릿 호출 [ HttpServlet service() ]` &#10140; `DispathcerServlet.doDispatch()`
+
 -----
 
 
